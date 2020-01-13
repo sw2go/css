@@ -3,41 +3,32 @@
     padding: 0;
 }
 
-/* For IE only, flex on body to wrap .site again with flex container */
 body {
-    display: flex;  
-    flex-direction: column;    
+    display: flex;              /* sf: For IE only, flex on body */ 
+    flex-direction: column;     /* sf: to wrap .site again with flex container */
 }
 
 .site {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    align-items: center;
-
+    display: flex;              /* sf: for sticky footer */
+    flex-direction: column;     /* sf: flex on parent with direction column */
+    min-height: 100vh;          /* sf: parent with min-height = viewport */
+    align-items: center;        /* cc: centered alle flex-items entlang der Längsachse (d.h. column) */
 }
 
 .content {
-    flex: 1 0 auto;
-    width: 800px; 
-    background-color: aqua;      
-}
-
-@media all and (max-width: 800px) {
-    .content {
-      /* When on medium sized screens, we center it by evenly distributing empty space around items */
-      width: 100vw; 
-    }
-}
-
-
+    flex: 1 0 auto;             /* sf: for sticky footer, make content use up all */ 
+    max-width: 800px;           /* cc: max breite des centered content */
+    width: 100%;                /* cc: falls width < max-width 100% der verfügbaren breite füllen */
+}                               /*     100wh ginge auch aber ist unschön soblad v-scrollbar erscheint */
 
 .nav-bar {
     display: flex;
+    justify-content: flex-end;
+
 }
 .nav-bar > li {
-    flex: 1;
-    list-style-type: none;    
+    list-style-type: none;      /* remove bullet */ 
+    border: 1px yellow solid; 
 }
 
 
@@ -56,4 +47,11 @@ main {
 
 footer {
     background-color: blue;
+}
+
+.nav-bar { 
+    border: 1px black solid;
+}
+.nav-bar > li {
+    border: 1px yellow solid; 
 }

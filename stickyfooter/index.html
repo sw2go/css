@@ -4,15 +4,16 @@
         <title>Sticky Footer</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <base href="/">        
-        <link rel="stylesheet" href="/style.css" />
-        <script src="/script.js"></script>
+        <base href="./">        
+        <link rel="stylesheet" href="./style.css" />
+        <script src="./script.js"></script>
     </head>
     <body>
         <div class="site">
             <header class="header">header</header>
             <main class="content">                
-                <span>content</span><button onclick="add(event)">add div</button>
+                <div><button onclick="addSpan(event)">add span</button><span>span:</span></div>
+                <div><button onclick="addDiv(event)">add div</button><span>div:</span></div>  
             </main>
             <footer class="footer">footer</footer>
         </div>

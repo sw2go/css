@@ -3,22 +3,21 @@
     padding: 0;
 }
 
-/* For IE only, flex on body to wrap .site again with flex container */
 body {
-    display: flex;  
-    flex-direction: column;    
+    display: flex;              /* For IE only, flex on body */ 
+    flex-direction: column;     /* to wrap .site again with flex container */
 }
 
 .site {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;    
+    display: flex;              /* for sticky footer */
+    flex-direction: column;     /* flex on parent with direction column */
+    min-height: 100vh;          /* parent with min-height = viewport */
+
 }
 
 .content {
-    flex: 1 0 auto;
-}
-
+    flex: 1 0 auto;             /* for sticky footer, make content use up all */  
+}                               /* header and footer remain on defaults 0 1 auto */
 
 
 /* Colors only */
