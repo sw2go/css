@@ -11,13 +11,13 @@ body {
 .site {
     display: flex;              /* for sticky footer */
     flex-direction: column;     /* flex on parent with direction column */
-    min-height: 100vh;          /* parent with min-height = viewport, can grow*/
+    height: 100vh;              /* fixed height */   
 }
 
-.content {
-    flex: 1 0 auto;             /* for sticky footer, make content use up all, can grow */  
-}                               /* header and footer remain on defaults 0 1 auto */
-
+.content {                      /* content, header and footer remain on flex-defaults 0 1 auto */
+    flex: 1 1 0;                /* make content use up all, but start at 0 and */
+    overflow-y: auto;           /* show y scrollbar when required */
+}                               
 
 /* Colors only */
 * {
